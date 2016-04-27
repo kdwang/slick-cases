@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title></title>
+<link rel="stylesheet" type="text/css" href="slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="slick.js"></script>
+<style>
+* {
+	padding:0;
+	margin:0;
+}
+body {
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+}
+.slide_con li{ height: 100px; width: 100%;}
+.slide_con .a{ background-color: #ff5500;}
+.slide_con .b{ background-color: #666;}
+.slide_con .c{ background-color: #000;}
+</style>
+</head>
+<body>
+
+<div style="height: 200px;">
+	<ul class="slide_con">
+		<li class="a"></li>
+		<li class="b"></li>
+		<li class="c"></li>
+	</ul>
+</div>
+
+<div class="slider slider-for slick-initialized slick-slider">
+	<div aria-live="polite" class="slick-list draggable">
+	    <div class="slick-track" role="listbox">
+	        <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide120">
+	            111
+	        </div>
+	        <div class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide121">
+	            222
+	        </div>
+	        <div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide122">
+	            333
+	        </div>
+	        <div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide123">
+	            444
+	        </div>
+	        <div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide124">
+	            555
+	        </div>
+	    </div>
+	</div>
+</div>
+<div class="slider slider-nav slick-initialized" role="toolbar">
+    <div aria-live="polite" class="slick-list draggable" style="padding: 0px 50px;">
+        <div class="slick-track" role="listbox">
+            <div class="slick-slide slick-cloned" data-slick-index="-4">
+                <h3>
+                    2
+                </h3>
+            </div>
+            <div class="slick-slide slick-cloned" data-slick-index="-3">
+                <h3>
+                    3
+                </h3>
+            </div>
+            <div class="slick-slide slick-cloned" data-slick-index="-2">
+                <h3>
+                    4
+                </h3>
+            </div>
+            <div class="slick-slide slick-cloned slick-active" data-slick-index="-1">
+                <h3>
+                    5
+                </h3>
+            </div>
+            <div class="slick-slide slick-current slick-active slick-center" data-slick-index="0"
+            aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide130">
+                <h3>
+                    1
+                </h3>
+            </div>
+            <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+            tabindex="-1" role="option" aria-describedby="slick-slide131">
+                <h3>
+                    2
+                </h3>
+            </div>
+            <div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1"
+            role="option" aria-describedby="slick-slide132">
+                <h3>
+                    3
+                </h3>
+            </div>
+            <div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1"
+            role="option" aria-describedby="slick-slide133">
+                <h3>
+                    4
+                </h3>
+            </div>
+            <div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1"
+            role="option" aria-describedby="slick-slide134">
+                <h3>
+                    5
+                </h3>
+            </div>
+            <div class="slick-slide slick-cloned slick-center" data-slick-index="5">
+                <h3>
+                    1
+                </h3>
+            </div>
+            <div class="slick-slide slick-cloned" data-slick-index="6">
+                <h3>
+                    2
+                </h3>
+            </div>
+            <div class="slick-slide slick-cloned" data-slick-index="7">
+                <h3>
+                    3
+                </h3>
+            </div>
+            <div class="slick-slide slick-cloned" data-slick-index="8">
+                <h3>
+                    4
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// http://kenwheeler.github.io/slick/
+$(document).ready(function(){
+	$('.slide_con').slick({
+		'setting-name': 'setting-value'
+	});
+
+
+	 $('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true
+	});
+});
+</script>
+</body>
+</html>
